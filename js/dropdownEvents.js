@@ -25,10 +25,6 @@ function newFile() {
     document.getElementById("text").innerHTML = ""
 }
 
-function newFile() {
-
-}
-
 function saveFile() {
 
 }
