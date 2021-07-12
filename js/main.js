@@ -6,12 +6,44 @@ document.addEventListener('keydown', function(e) {
 
     if ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)  && e.keyCode == 83) {
         e.preventDefault();
-        alert("saved")
+        alert("asd")
+        download("default")
       }
 });
 
+function selectText() {
+    var div = document.getElementById('text');
+    setTimeout(function() {
+        div.focus();
+    }, 0);
+}
+
 function openFile() {
-    alert("test")
+    var dropdown = document.getElementById('Acntname');
+    var event = document.createEvent('MouseEvents');
+    event.initMouseEvent('mousedown', true, true, window);
+    dropdown.dispatchEvent(event);
+}
+
+function download(filename) {
+    var text = document.getElementById("text").innerText;
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain+ parsed.join("\r\n");charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+}
+
+window.showState = function (str) {
+    var dropdown = document.getElementById('Acntname');
+    var event = document.createEvent('MouseEvents');
+    event.initMouseEvent('mousedown', true, true, window);
+    dropdown.dispatchEvent(event);
 }
 
 window.onbeforeunload = confirmExit;

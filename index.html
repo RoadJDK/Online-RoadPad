@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="js/main.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/download.js"></script>
 
     <title>Document</title>
 </head>
@@ -14,20 +17,34 @@
         <div class="container">
             <div class="list">
                 <ul>
-                    <li onclick="openFile()">
-                        File
+                    <li">
+                        <div class="dropdown">
+                            <button onclick="fileDropdown()" class="dropbtn">File</button>
+                            <div id="fileDropdown" class="dropdown-content">
+                              <a>New</a>
+                              <a>Open</a>
+                              <a>Save</a>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        Edit
+                        <div class="dropdown">
+                            <button onclick="editDropdown()" class="dropbtn">Edit</button>
+                            <div id="editDropdown" class="dropdown-content">
+                              <a>Customize</a>
+                              <a>Send Feedback</a>
+                              <a>About</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="bot">
+    <div class="bot" onclick="selectText()">
         <div class="container">
             <div class="editor">
-                <p contenteditable="true">write some text here...</p>
+                <p id="text" contenteditable="true"></p>
             </div>
         </div>
     </div>
