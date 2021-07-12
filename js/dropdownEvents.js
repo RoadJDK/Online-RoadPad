@@ -26,7 +26,7 @@ function newFile() {
 }
 
 function saveFile() {
-
+    download("default")
 }
 
 function darkmode() {
