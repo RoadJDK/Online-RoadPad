@@ -13,7 +13,7 @@ document.addEventListener('keydown', function(e) {
 function selectText() {
     var div = document.getElementById('text');
     setTimeout(function() {
-        div.focus();
+        div.focus.seetca
     }, 0);
 }
 
@@ -36,6 +36,7 @@ function download(filename) {
     element.click();
   
     document.body.removeChild(element);
+    editMode = false;
 }
 
 window.showState = function (str) {
@@ -51,5 +52,9 @@ function confirmExit()
     if (editMode) {
     return "You have attempted to leave this page.  If you have made any changes to the fields without clicking the Save button, your changes will be lost.  Are you sure you want to exit this page?";
     }
+    
+}
+
+function dragAndDrop() {
     
 }

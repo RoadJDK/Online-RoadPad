@@ -6,9 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="js/dropdownEvents.js"></script>
     <script src="js/main.js"></script>
     <script src="js/dropdown.js"></script>
-    <script src="js/dropdownEvents.js"></script>
 
     <title>Road Online Notepad</title>
 </head>
@@ -22,7 +22,7 @@
                             <button onclick="fileDropdown()" class="dropbtn">File</button>
                             <div id="fileDropdown" class="dropdown-content">
                               <a onclick="newFile()">New</a>
-                              <a>Open</a>
+                              <a onclick="document.getElementById('file-input').click()">Open</a>
                               <a>Save</a>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                         <div class="dropdown">
                             <button onclick="editDropdown()" class="dropbtn">Edit</button>
                             <div id="editDropdown" class="dropdown-content">
-                              <a>Customize</a>
+                              <a>Darkmode On/Off</a>
                               <a>Send Feedback</a>
                               <a>About</a>
                             </div>
@@ -42,6 +42,7 @@
         </div>
     </div>
     <div class="bot" onclick="selectText()">
+        <input id="file-input" type="file" name="name" onchange="proccessFile()" style="display: none;" />
         <div class="container">
             <div class="editor">
                 <p id="text" contenteditable="true"></p>
