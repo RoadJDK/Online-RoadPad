@@ -6,9 +6,13 @@ document.addEventListener('keydown', function(e) {
 
     if ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)  && e.keyCode == 83) {
         e.preventDefault();
-        download("default")
+        download(getFirstWord())
       }
 });
+
+function getFirstWord() {
+    return document.getElementById("text").innerText.split('\n')[0]
+}
 
 function selectText() {
     var div = document.getElementById('text');
