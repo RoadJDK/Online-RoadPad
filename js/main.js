@@ -13,8 +13,20 @@ document.addEventListener('keydown', function(e) {
 function selectText() {
     var div = document.getElementById('text');
     setTimeout(function() {
-        div.focus.seetca
+        div.focus()
+        setEndOfContenteditable(div)
     }, 0);
+}
+
+function setEndOfContenteditable(item)
+{
+    var range,selection
+    range = document.createRange()
+    range.selectNodeContents(item)
+    range.collapse(false)
+    selection = window.getSelection()
+    selection.removeAllRanges()
+    selection.addRange(range)
 }
 
 function openFile() {
