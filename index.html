@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="js/main.js"></script>
     <script src="js/dropdown.js"></script>
-    <script src="js/download.js"></script>
+    <script src="js/dropdownEvents.js"></script>
 
-    <title>Document</title>
+    <title>Road Online Notepad</title>
 </head>
 <body>
     <div class="top">
@@ -21,7 +21,7 @@
                         <div class="dropdown">
                             <button onclick="fileDropdown()" class="dropbtn">File</button>
                             <div id="fileDropdown" class="dropdown-content">
-                              <a>New</a>
+                              <a onclick="newFile()">New</a>
                               <a>Open</a>
                               <a>Save</a>
                             </div>
