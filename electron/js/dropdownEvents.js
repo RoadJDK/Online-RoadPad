@@ -42,11 +42,7 @@ function toggleDarkmode() {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    if (getCookie("darkmode") == "true") {
-        darkmode = true
-    } else {
-        darkmode = false
-    }
+    darkmode = true //only for electron
     setDarkmode()
 });
 

@@ -18,14 +18,14 @@
     <title>RoadPad</title>
 </head>
 
-<body class="body-d body-l">
-    <div id="top" class="top-d top-l">
+<body class="body-l body-d">
+    <div id="top" class="top-l top-d">
         <div class="container">
             <div class="list">
                 <ul>
                     <li>
                         <div class="dropdown">
-                            <button onclick="fileDropdown()" class="dropbtn dropbtn-d dropbtn-l" id="dropbtn1">File</button>
+                            <button onclick="fileDropdown()" class="dropbtn dropbtn-l dropbtn-d" id="dropbtn1">File</button>
                             <div id="fileDropdown" class="dropdown-content">
                               <a onclick="newFile()">New</a>
                               <a onclick="document.getElementById('file-input').click()">Open</a>
@@ -35,7 +35,7 @@
                     </li>
                     <li>
                         <div class="dropdown">
-                            <button onclick="editDropdown()" id="dropbtn2" class="dropbtn dropbtn-d dropbtn-l">Edit</button>
+                            <button onclick="editDropdown()" class="dropbtn dropbtn-l dropbtn-d" id="dropbtn2">Edit</button>
                             <div id="editDropdown" class="dropdown-content">
                               <a onclick="toggleDarkmode()">Darkmode On/Off</a>
                               <a onclick="about()">Send Feedback</a>
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="bot-d bot-l" id="bot" onclick="selectText(event)">
+    <div class="bot-l bot-d" id="bot" onclick="selectText(event)">
         <input id="file-input" type="file" name="name" onchange="proccessFile()" style="display: none;" />
         <div class="container">
             <div class="editor">
