@@ -52,10 +52,42 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function setDarkmode() {
     var body = document.body;
-    var top = document.getElementsByClassName("top")
-    var bot = document.getElementsByClassName("bot")
-    var dropbtn = document.getElementsByClassName("dropbtn")
+    var top = document.querySelector("#top")
+    var bot = document.querySelector("#bot")
+    var dropbtn1 = document.querySelector("#dropbtn1")
+    var dropbtn2 = document.querySelector("#dropbtn2")
     
+    if (darkmode) {
+        if(!body.classList.contains("body-d")) {
+            body.classList.add("body-d");
+            top.classList.add("top-d");
+            bot.classList.add("bot-d");
+            dropbtn1.classList.add("dropbtn-d");
+            dropbtn2.classList.add("dropbtn-d");
+        }
+        if(body.classList.contains("body-l")) {
+            body.classList.remove("body-l");
+            top.classList.remove("top-l");
+            bot.classList.remove("bot-l");
+            dropbtn1.classList.remove("dropbtn-l");
+            dropbtn2.classList.remove("dropbtn-l");
+        }
+    } else {
+        if(body.classList.contains("body-d")) {
+            body.classList.remove("body-d");
+            top.classList.remove("top-d");
+            bot.classList.remove("bot-d");
+            dropbtn1.classList.remove("dropbtn-d");
+            dropbtn2.classList.remove("dropbtn-d");
+        }
+        if(!body.classList.contains("body-l")) {
+            body.classList.add("body-l");
+            top.classList.add("top-l");
+            bot.classList.add("bot-l");
+            dropbtn1.classList.add("dropbtn-l");
+            dropbtn2.classList.add("dropbtn-l");
+        }
+    }
 }
 
   function setCookie(cName, cValue, expDays) {

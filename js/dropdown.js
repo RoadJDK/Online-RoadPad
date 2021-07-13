@@ -23,7 +23,7 @@ function editDropdown() {
 }
 
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn-d')) {
+  if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
