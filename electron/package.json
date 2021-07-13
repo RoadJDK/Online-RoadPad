@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . roadpad --platform win32 --arch x64 --out dist/ --asar --icon=./icon.ico",
-    "setup": "electron-installer-windows --src dist/roadpad-win32-x64/ --dest dist/installers/ --icon=./content/favicon/icon.ico"
+    "setup": "electron-installer-windows --src dist/roadpad-win32-x64/ --dest dist/installers/"
   },
   "author": "RoadJDK",
   "license": "MIT",
