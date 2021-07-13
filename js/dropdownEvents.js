@@ -109,9 +109,13 @@ function setDarkmode() {
 }
 
 function feedback() {
-
+    if(checkEditMode()) {
+        if (!confirm("You have attempted to leave this page.  If you have made any changes to the fields without clicking the Save button, your changes will be lost.  Are you sure you want to exit this page?")) {
+            return
+        }
+    }
 }
 
 function about() {
-
+    window.location.replace("https://github.com/RoadJDK/Online-Notepad")
 }
