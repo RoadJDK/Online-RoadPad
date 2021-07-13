@@ -7,7 +7,7 @@ function createWindow () {
       minWidth: 250,
       height: 600,
       minHeight: 150,
-      icon: path.join(__dirname, 'content/favicon/favicon-32x32.png'),
+      icon: path.join(__dirname, './icon.ico'),
       webPreferences: {
           nodeIntegration: true
       }
