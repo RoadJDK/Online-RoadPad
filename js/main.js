@@ -14,7 +14,11 @@ function getFirstWord() {
     return document.getElementById("text").innerText.split('\n')[0]
 }
 
-function selectText() {
+function selectText(event) {
+    if (event.currentTarget !== event.target) {
+        return;
+      }
+
     var div = document.getElementById('text');
     setTimeout(function() {
         div.focus()
