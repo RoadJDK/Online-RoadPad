@@ -20,6 +20,7 @@ function createWindow () {
 
   app.whenReady().then(() => {
     createWindow()
+    makeInstaller()
   })
 
   app.on('window-all-closed', function () {
